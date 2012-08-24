@@ -23,6 +23,12 @@
 "
 " https://github.com/jonathanfilip/lucius
 "
+" You can also clone the following repository if you use Pathogen or something
+" similar. It holds the vim color scheme in a 'colors' directory:
+"
+" https://github.com/jonathanfilip/vim-lucius
+"
+"
 "
 " Presets:
 "
@@ -252,8 +258,8 @@ let s:undercurl_items = [
             \ ]
 
 " Clear default settings
-for item in s:normal_items + s:bold_items + s:underline_items + s:undercurl_items
-    exec "hi " . item . " guifg=NONE guibg=NONE gui=none"
+for s:item in s:normal_items + s:bold_items + s:underline_items + s:undercurl_items
+    exec "hi " . s:item . " guifg=NONE guibg=NONE gui=none"
                 \ . " ctermfg=NONE ctermbg=NONE cterm=none term=none"
 endfor
 
@@ -633,27 +639,27 @@ hi Underlined   guifg=fg
 " Text Emphasis:
 " ============================================================================
 
-for item in s:normal_items
-    exec "hi " . item . " gui=none cterm=none term=none"
+for s:item in s:normal_items
+    exec "hi " . s:item . " gui=none cterm=none term=none"
 endfor
 
 if s:use_bold == 1
-    for item in s:bold_items
-        exec "hi " . item . " gui=bold cterm=bold term=none"
+    for s:item in s:bold_items
+        exec "hi " . s:item . " gui=bold cterm=bold term=none"
     endfor
 endif
 
 if s:use_underline == 1
-    for item in s:underline_items
-        exec "hi " . item . " gui=underline cterm=underline term=none"
+    for s:item in s:underline_items
+        exec "hi " . s:item . " gui=underline cterm=underline term=none"
     endfor
-    for item in s:undercurl_items
-        exec "hi " . item . " cterm=underline"
+    for s:item in s:undercurl_items
+        exec "hi " . s:item . " cterm=underline"
     endfor
 endif
 
-for item in s:undercurl_items
-    exec "hi " . item . " gui=undercurl term=none"
+for s:item in s:undercurl_items
+    exec "hi " . s:item . " gui=undercurl term=none"
 endfor
 
 
@@ -663,12 +669,12 @@ endfor
 
 call s:AddCterm("Normal")
 
-for item in s:normal_items + s:bold_items + s:underline_items
-    call s:AddCterm(item)
+for s:item in s:normal_items + s:bold_items + s:underline_items
+    call s:AddCterm(s:item)
 endfor
 
-for item in s:undercurl_items
-    call s:AddSpCterm(item)
+for s:item in s:undercurl_items
+    call s:AddSpCterm(s:item)
 endfor
 
 
@@ -679,12 +685,12 @@ endfor
 let s:alternative_bold_items = ["Identifier", "PreProc", "Statement",
             \ "Special", "Constant", "Type"]
 
-for item in s:alternative_bold_items
-    exec "let s:temp_gui_fg = synIDattr(synIDtrans(hlID('" . item .
+for s:item in s:alternative_bold_items
+    exec "let s:temp_gui_fg = synIDattr(synIDtrans(hlID('" . s:item .
                 \ "')), 'fg', 'gui')"
-    exec "let s:temp_cterm_fg = synIDattr(synIDtrans(hlID('" . item .
+    exec "let s:temp_cterm_fg = synIDattr(synIDtrans(hlID('" . s:item .
                 \ "')), 'fg', 'cterm')"
-    exec "hi B" . item . " guifg=" . s:temp_gui_fg . " ctermfg=" .
+    exec "hi B" . s:item . " guifg=" . s:temp_gui_fg . " ctermfg=" .
                 \ s:temp_cterm_fg . " gui=bold cterm=bold term=none"
 endfor
 

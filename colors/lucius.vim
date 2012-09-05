@@ -254,12 +254,6 @@ let s:undercurl_items = [
             \ "SpellBad", "SpellCap", "SpellLocal", "SpellRare"
             \ ]
 
-" Clear default settings
-for s:item in s:normal_items + s:bold_items + s:underline_items + s:undercurl_items
-    exec "hi " . s:item . " guifg=NONE guibg=NONE gui=none"
-                \ . " ctermfg=NONE ctermbg=NONE cterm=none term=none"
-endfor
-
 
 " ============================================================================
 " Color Definitions:
@@ -306,7 +300,18 @@ endif
 
 call s:AddCterm("Normal")
 
+
+" ----------------------------------------------------------------------------
+" Extra setup
+" ----------------------------------------------------------------------------
+
 exec "set background=" . s:style
+
+" Clear default settings
+for s:item in s:normal_items + s:bold_items + s:underline_items + s:undercurl_items
+    exec "hi " . s:item . " guifg=NONE guibg=NONE gui=none"
+                \ . " ctermfg=NONE ctermbg=NONE cterm=none term=none"
+endfor
 
 let g:colors_name="lucius"
 

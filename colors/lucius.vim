@@ -1,7 +1,7 @@
 " ============================================================================
 " Name:     Lucius vim color scheme
 " Author:   Jonathan Filip <jfilip1024@gmail.com>
-" Version:  8.1.2
+" Version:  8.1.3
 " ----------------------------------------------------------------------------
 "
 " Light and dark color scheme for GUI and 256 color terminal.
@@ -347,8 +347,8 @@ if s:style == "light"
         hi Type         guifg=#005f87
     endif
 else
-    hi NonText      guifg=#5f5f87
-    hi SpecialKey   guifg=#5f875f
+    hi NonText    		guifg=#5f875f
+    hi SpecialKey		guifg=#5f5f87
     if s:contrast == "low"
         hi Comment      guifg=#6c6c6c
         hi Constant     guifg=#afaf87
@@ -492,7 +492,7 @@ hi TabLine      guifg=bg
 hi TabLineSel   guifg=fg
 hi WildMenu     guifg=fg
 if s:style == "light"
-    hi ColorColumn                  guibg=#d7d7af
+    hi ColorColumn                  guibg=#e4e4e4
     hi CursorLineNr guifg=#9e9e9e   guibg=#dadada
     hi FoldColumn                   guibg=#bcbcbc
     hi Folded                       guibg=#bcbcbc
@@ -531,7 +531,7 @@ if s:style == "light"
         hi VertSplit                    guibg=#808080
     endif
 else
-    hi ColorColumn                  guibg=#87875f
+    hi ColorColumn                  guibg=#3a3a3a
     hi CursorLineNr guifg=#626262   guibg=#444444
     hi FoldColumn                   guibg=#4e4e4e
     hi Folded                       guibg=#4e4e4e

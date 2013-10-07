@@ -255,7 +255,7 @@ let s:normal_items = [
 
 let s:bold_items = [
             \ "DiffText", "FoldColumn", "Folded", "StatusLine", "TabLineSel",
-            \ "Title",
+            \ "Title", "CursorLineNr",
             \ ]
 
 let s:underline_items = [
@@ -359,8 +359,8 @@ if s:style == "light"
         hi Type         guifg=#005f87
     endif
 else
-    hi NonText    		guifg=#5f875f
-    hi SpecialKey		guifg=#5f5f87
+    hi NonText      guifg=#5f5f87
+    hi SpecialKey   guifg=#5f875f
     if s:contrast == "low"
         hi Comment      guifg=#6c6c6c
         hi Constant     guifg=#afaf87
@@ -505,14 +505,14 @@ hi TabLineSel   guifg=fg
 hi WildMenu     guifg=fg
 if s:style == "light"
     hi ColorColumn                  guibg=#e4e4e4
-    hi CursorLineNr guifg=#9e9e9e   guibg=#dadada
+    hi CursorLineNr guifg=#626262   guibg=#dadada
     hi FoldColumn                   guibg=#bcbcbc
     hi Folded                       guibg=#bcbcbc
     hi LineNr       guifg=#9e9e9e   guibg=#dadada
     hi PmenuSel                     guibg=#afd7ff
     hi SignColumn                   guibg=#d0d0d0
-    hi StatusLineNC guifg=#e4e4e4
-    hi TabLineFill  guifg=#b2b2b2
+    hi StatusLineNC guifg=#dadada
+    hi TabLineFill  guifg=#dadada
     hi VertSplit    guifg=#e4e4e4
     hi WildMenu                     guibg=#afd7ff
     if s:contrast == "low"
@@ -544,14 +544,14 @@ if s:style == "light"
     endif
 else
     hi ColorColumn                  guibg=#3a3a3a
-    hi CursorLineNr guifg=#626262   guibg=#444444
+    hi CursorLineNr guifg=#9e9e9e   guibg=#444444
     hi FoldColumn                   guibg=#4e4e4e
     hi Folded                       guibg=#4e4e4e
     hi LineNr       guifg=#626262   guibg=#444444
     hi PmenuSel                     guibg=#005f87
     hi SignColumn                   guibg=#4e4e4e
-    hi StatusLineNC guifg=#444444
-    hi TabLineFill  guifg=#444444
+    hi StatusLineNC guifg=#4e4e4e
+    hi TabLineFill  guifg=#4e4e4e
     hi VertSplit    guifg=#626262
     hi WildMenu                     guibg=#005f87
     if s:contrast == "low"
@@ -638,10 +638,10 @@ if s:style == "light"
     hi SpellLocal   guisp=#d7af00
     hi SpellRare    guisp=#5faf00
 else
-    hi SpellBad     guisp=#d70000
-    hi SpellCap     guisp=#00afd7
-    hi SpellLocal   guisp=#d7af00
-    hi SpellRare    guisp=#5faf00
+    hi SpellBad     guisp=#ff5f5f
+    hi SpellCap     guisp=#5fafd7
+    hi SpellLocal   guisp=#d7af5f
+    hi SpellRare    guisp=#5faf5f
 endif
 
 

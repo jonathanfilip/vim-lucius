@@ -1,7 +1,7 @@
 " ============================================================================
 " Name:     Lucius vim color scheme
 " Author:   Jonathan Filip <jfilip1024@gmail.com>
-" Version:  8.1.4
+" Version:  8.1.5
 " ----------------------------------------------------------------------------
 "
 " Light and dark color scheme for GUI and 256 color terminal.
@@ -332,8 +332,6 @@ let g:colors_name="lucius"
 " Text Markup:
 " ----------------------------------------------------------------------------
 
-hi ModeMsg      guifg=fg
-hi Question     guifg=fg
 if s:style == "light"
     hi NonText      guifg=#afafd7
     hi SpecialKey   guifg=#afd7af
@@ -462,30 +460,34 @@ endif
 " Messages:
 " ----------------------------------------------------------------------------
 
-hi ModeMsg      guifg=fg
 hi Question     guifg=fg
 if s:style == "light"
     if s:contrast == "low"
         hi ErrorMsg     guifg=#d70000
+        hi ModeMsg      guifg=#0087ff
         hi MoreMsg      guifg=#0087ff
         hi WarningMsg   guifg=#d78700
     else
         hi ErrorMsg     guifg=#af0000
-        hi MoreMsg      guifg=#005fd7
+        hi ModeMsg      guifg=#005faf
+        hi MoreMsg      guifg=#005faf
         hi WarningMsg   guifg=#af5f00
     endif
 else
     if s:contrast == "low"
         hi ErrorMsg     guifg=#d75f5f
-        hi MoreMsg      guifg=#00afaf
+        hi ModeMsg      guifg=#87afaf
+        hi MoreMsg      guifg=#87afaf
         hi WarningMsg   guifg=#af875f
     elseif s:contrast == "high"
         hi ErrorMsg     guifg=#ff8787
-        hi MoreMsg      guifg=#87ffff
+        hi ModeMsg      guifg=#afffff
+        hi MoreMsg      guifg=#afffff
         hi WarningMsg   guifg=#ffaf87
     else
         hi ErrorMsg     guifg=#ff5f5f
-        hi MoreMsg      guifg=#5fd7d7
+        hi ModeMsg      guifg=#afd7d7
+        hi MoreMsg      guifg=#afd7d7
         hi WarningMsg   guifg=#d7875f
     endif
 endif
@@ -768,4 +770,3 @@ command! LuciusBlackHighContrast call SetLucius("dark", "high", "high")
             \ | colorscheme lucius
 
 " vim: tw=78
-

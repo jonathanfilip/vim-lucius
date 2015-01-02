@@ -363,7 +363,7 @@ else
         hi Comment      guifg=#6c6c6c
         hi Constant     guifg=#afaf87
         hi Directory    guifg=#87af87
-        hi Identifier   guifg=#87af5f
+        hi Identifier   guifg=#87af00
         hi PreProc      guifg=#5faf87
         hi Special      guifg=#af87af
         hi Statement    guifg=#5fafd7
@@ -407,7 +407,7 @@ if s:style == "light"
     hi CursorColumn                 guibg=#dadada
     hi CursorLine                   guibg=#dadada
     hi IncSearch    guifg=fg        guibg=#5fd7d7
-    hi MatchParen   guifg=NONE      guibg=#5fd7d7
+    hi MatchParen   guifg=NONE      guibg=#00d7d7
     hi Search       guifg=fg        guibg=#ffaf00
     hi Visual                       guibg=#afd7ff
     if s:contrast == "low"
@@ -433,7 +433,7 @@ else
         hi CursorIM                     guibg=#5f87af
         hi Error        guifg=#d75f5f   guibg=#870000
         hi IncSearch                    guibg=#00afaf
-        hi MatchParen                   guibg=#87af5f
+        hi MatchParen                   guibg=#87af00
         hi Search                       guibg=#d78700
         hi Todo         guifg=#afaf00   guibg=#5f5f00
     elseif s:contrast == "high"
@@ -449,7 +449,7 @@ else
         hi CursorIM                     guibg=#87afd7
         hi Error        guifg=#ff8787   guibg=#870000
         hi IncSearch                    guibg=#5fd7d7
-        hi MatchParen                   guibg=#afd75f
+        hi MatchParen                   guibg=#afd700
         hi Search                       guibg=#d78700
         hi Todo         guifg=#d7d75f   guibg=#5f5f00
     endif

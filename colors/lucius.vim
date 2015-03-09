@@ -1,7 +1,7 @@
 " ============================================================================
 " Name:     Lucius vim color scheme
 " Author:   Jonathan Filip <jfilip1024@gmail.com>
-" Version:  8.1.6
+" Version:  8.1.7
 " ----------------------------------------------------------------------------
 "
 " Light and dark color scheme for GUI and 256 color terminal.
@@ -424,24 +424,30 @@ if s:style == "light"
 else
     hi CursorColumn                 guibg=#444444
     hi CursorLine                   guibg=#444444
-    hi IncSearch    guifg=fg        guibg=#87af00
-    hi MatchParen   guifg=NONE      guibg=#87af00
-    hi Search       guifg=fg        guibg=#d78700
+    hi IncSearch    guifg=bg
+    hi MatchParen   guifg=fg        guibg=#87af00
+    hi Search       guifg=bg
     hi Visual                       guibg=#005f87
     if s:contrast == "low"
         hi Cursor                       guibg=#5f87af
         hi CursorIM                     guibg=#5f87af
         hi Error        guifg=#d75f5f   guibg=#870000
+        hi IncSearch                    guibg=#00afaf
+        hi Search                       guibg=#d78700
         hi Todo         guifg=#afaf00   guibg=#5f5f00
     elseif s:contrast == "high"
         hi Cursor                       guibg=#afd7ff
         hi CursorIM                     guibg=#afd7ff
         hi Error        guifg=#ffafaf   guibg=#af0000
+        hi IncSearch                    guibg=#87ffff
+        hi Search                       guibg=#ffaf5f
         hi Todo         guifg=#ffff87   guibg=#87875f
     else
         hi Cursor                       guibg=#87afd7
         hi CursorIM                     guibg=#87afd7
         hi Error        guifg=#ff8787   guibg=#870000
+        hi IncSearch                    guibg=#5fd7d7
+        hi Search                       guibg=#d78700
         hi Todo         guifg=#d7d75f   guibg=#5f5f00
     endif
 endif

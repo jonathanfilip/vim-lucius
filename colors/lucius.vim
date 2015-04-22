@@ -242,7 +242,7 @@ endfunction
 " ============================================================================
 
 let s:normal_items = [
-            \ "ColorColumn", "Comment", "Constant", "Cursor", "CursorColumn",
+            \ "ColorColumn", "Comment", "Conceal", "Constant", "Cursor", "CursorColumn",
             \ "CursorIM", "CursorLine", "CursorLineNr", "DiffAdd", "DiffChange",
             \ "DiffDelete", "Directory", "Error", "ErrorMsg", "Identifier",
             \ "IncSearch", "LineNr", "MatchParen", "ModeMsg", "MoreMsg",
@@ -337,6 +337,7 @@ if s:style == "light"
     hi SpecialKey   guifg=#afd7af
     if s:contrast == "low"
         hi Comment      guifg=#9e9e9e
+        hi Conceal      guifg=#9e9e9e
         hi Constant     guifg=#d78700
         hi Directory    guifg=#00af87
         hi Identifier   guifg=#00af00
@@ -347,6 +348,7 @@ if s:style == "light"
         hi Type         guifg=#0087af
     else
         hi Comment      guifg=#808080
+        hi Conceal      guifg=#808080
         hi Constant     guifg=#af5f00
         hi Directory    guifg=#00875f
         hi Identifier   guifg=#008700
@@ -361,6 +363,7 @@ else
     hi SpecialKey   guifg=#5f875f
     if s:contrast == "low"
         hi Comment      guifg=#6c6c6c
+        hi Conceal      guifg=#6c6c6c
         hi Constant     guifg=#afaf87
         hi Directory    guifg=#87af87
         hi Identifier   guifg=#87af5f
@@ -371,6 +374,7 @@ else
         hi Type         guifg=#5fafaf
     elseif s:contrast == "high"
         hi Comment      guifg=#8a8a8a
+        hi Conceal      guifg=#8a8a8a
         hi Constant     guifg=#ffffd7
         hi Directory    guifg=#d7ffd7
         hi Identifier   guifg=#d7ffaf
@@ -381,6 +385,7 @@ else
         hi Type         guifg=#afffff
     else
         hi Comment      guifg=#808080
+        hi Conceal      guifg=#808080
         hi Constant     guifg=#d7d7af
         hi Directory    guifg=#afd7af
         hi Identifier   guifg=#afd787

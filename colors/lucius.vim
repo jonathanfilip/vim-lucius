@@ -144,6 +144,11 @@ else
     let s:no_term_bg = 0
 endif
 
+if exists("g:lucius_xterm_color_hacks")
+    let s:xterm_color_hacks = g:lucius_xterm_color_hacks
+else
+    let s:xterm_color_hacks = 0
+endif
 
 " ============================================================================
 " Color Map:
@@ -768,5 +773,15 @@ command! LuciusBlackLowContrast call SetLucius("dark", "low", "high")
             \ | colorscheme lucius
 command! LuciusBlackHighContrast call SetLucius("dark", "high", "high")
             \ | colorscheme lucius
+
+
+" ============================================================================
+" Color Hacks (by John Novak):
+" ============================================================================
+
+if s:xterm_color_hacks == 1
+  hi Visual cterm=reverse ctermfg=yellow ctermbg=black
+  hi Todo ctermfg=black
+endif
 
 " vim: tw=78
